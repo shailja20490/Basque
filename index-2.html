@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Basketopia (Basket World)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="#/">🧺 Basketopia</a>
+  <button id="newBtn" class="btn primary" type="button">+ New basket</button>
+</header>
+
+<main>
+  <section id="homeView">
+    <div class="hero">
+      <h1>Fill a basket with things you love.</h1>
+      <p>Make baskets, search almost any product on the web, and watch your picks pile up as 3D models. Drag any basket to spin it.</p>
+    </div>
+    <div class="sec-head"><h2>Your baskets</h2></div>
+    <div id="basketGrid" class="grid baskets"></div>
+
+    <div class="sec-head" id="discover"><h2>Find products</h2></div>
+    <form id="searchForm" class="search">
+      <input id="q" type="search" placeholder="Search products, e.g. lipstick, laptop, lamp" aria-label="Search products" autocomplete="off">
+      <button class="btn primary" type="submit">Search</button>
+    </form>
+    <div id="chips" class="chips"></div>
+    <div id="status" class="status" role="status"></div>
+    <div id="results" class="grid products"></div>
+  </section>
+
+  <section id="basketView" hidden></section>
+</main>
+
+<div id="modal" class="modal" hidden></div>
+<div id="toasts" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
